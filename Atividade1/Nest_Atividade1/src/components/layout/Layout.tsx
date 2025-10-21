@@ -1,0 +1,33 @@
+
+import { Link, Outlet } from "react-router-dom";
+import "./layout.css"; 
+
+export default function Layout() {
+  return (
+    <div id="defaultLayout">
+      <aside>
+        <Link to="/sistema/dashboard">Dashboard</Link>
+        {}
+      </aside>
+      <div className="content">
+        <header>
+          <div className="system-title">
+            <b>Sistema Acadêmico</b>
+          </div>
+          <div className="user-info">
+            <span className="username">
+              <b>Jeferson</b> {}
+            </span>
+            <a href="#" className="btn btn-logout">
+              Logout
+            </a>
+          </div>
+        </header>
+        <main>
+          {}
+          <Outlet />
+        </main>
+      </div>
+    </div>
+  );
+}
